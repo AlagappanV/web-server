@@ -21,11 +21,11 @@ app.use(middlewr.logger);
 
 //set the route
 app.get('/about', middlewr.requireAuthentication, function (req, res) {
-	res.send('in about page');
+	res.send('in about page!');
 });
 
 app.use(express.static(__dirname+'/public'));
 
 app.listen(port, function (){
-	console.log('Express Server Started on ' , port);
+	console.log('Express Server Started on ' , port , '!');
 });
