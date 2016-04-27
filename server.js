@@ -2,16 +2,10 @@ var express = require('express');
 var app = express();
 var port = 3000;
 var dt = new Date().toString();
-var middlewr = {
-	requireAuthentication: function (req, res, next) {
-		console.log('PRIVATE');
-		next();
-	},
-	logger: function (req, res, next) {
-		console.log(req.method+ '  '+req.originalUrl+' '+ dt);
-		next();
-	}
-};
+
+var middlewr = require('./middleware.js');
+
+// module.exports = dt;
 //app.use(middlewr.requireAuthentication);
 app.use(middlewr.logger);
 //
