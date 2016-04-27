@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
-var port = 3000;
+//var port = 3000;
+var port = process.env.port || 3000;
 var dt = new Date().toString();
 
 var middlewr = require('./middleware.js');
